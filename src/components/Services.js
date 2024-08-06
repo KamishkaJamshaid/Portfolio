@@ -5,7 +5,8 @@ import { useTypewriter, Cursor } from 'react-simple-typewriter';
 import css from '../assets/css.png'
 import js from '../assets/js.jpeg'
 import react from '../assets/react.png'
-import tw from '../assets/tw.png'
+import tw from '../assets/ts.jpeg'
+import nodejs from '../assets/node.png'
 
 const Services = () => {
   const [text] = useTypewriter({
@@ -22,12 +23,13 @@ const Services = () => {
           <span>{text}</span><Cursor cursorStyle='>'/>
         </h2>
         <h3 className="text-lg md:text-xl lg:text-2xl font-bold my-3">Client-centric website design</h3>        
-        <div className='grid grid-cols-3 sm:grid-cols-5 md:grid-cols-5 lg:grid-cols-8 lg:pl-28 mx-auto gap-2 items-center justify-items-center my-8 max-w-screen-lg'>
-          <img src={react} alt='React' className='lg:col-start-2 transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-300 h-16 w-16 md:h-24 md:w-24 border-violet-300 p-2 border-2 rounded-full' />
+        <div className='grid grid-cols-3 sm:grid-cols-5 md:grid-cols-5 lg:grid-cols-7 lg:pl-28 mx-auto gap-2 items-center justify-items-center my-8 max-w-screen-lg'>
           <img src={html} alt='HTML' className='transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-300 h-16 w-16 md:h-24 md:w-24 border-violet-300 p-2 border-2 rounded-full' />
           <img src={css} alt='CSS' className='transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-300 h-16 w-16 md:h-24 md:w-24 border-violet-300 p-2 border-2 rounded-full' />
-          <img src={js} alt='JavaScript' className='transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-300 h-16 w-16 md:h-24 md:w-24 border-violet-300 p-2 border-2 rounded-full' />  
-          <img src={tw} alt='Tailwind CSS' className='transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-300 h-16 w-16 md:h-24 md:w-24 border-violet-300 p-2 border-2 rounded-full' />      
+          <img src={js} alt='JavaScript' className='transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-300 h-16 w-16 md:h-24 md:w-24 border-violet-300 p-2 border-2 rounded-full' /> 
+          <img src={react} alt='React' className=' transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-300 h-16 w-16 md:h-24 md:w-24 border-violet-300 p-2 border-2 rounded-full' />
+          <img src={tw} alt='Tailwind CSS' className='transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-300 h-16 w-16 md:h-24 md:w-24 border-violet-300 p-2 border-2 rounded-full' /> 
+          <img src={nodejs} alt='nodejs' className='transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-300 h-16 w-16 md:h-24 md:w-24 border-violet-300 p-2 border-2 rounded-full' />      
         </div>
         <p className='mb-8 max-w-screen-md mx-auto'>These services demonstrate my comprehensive skill set and commitment to delivering high-quality, tailored web solutions for a variety of client needs.</p>
         <div className="flex flex-wrap justify-center gap-6 md:gap-10">

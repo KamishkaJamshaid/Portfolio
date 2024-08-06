@@ -11,11 +11,11 @@ const Resume = () => {
   });
   return (
     <div id='about' className="p-2 m-8 md:p-8 lg:p-8 rounded-lg border-2 border-violet-700 shadow-inner shadow-violet-600 text-white">
-      <div className="container mx-auto px-4 md:px-2 p-8 py-12 lg:p-12">
+      <div className="container mx-auto md:px-2 md:p-8 p-2 py-12 lg:p-12">
         <div className="text-center mb-4 md:mb-12">
           <h2 className="text-3xl md:text-4xl font-semibold bg-gradient-to-r from-violet-950 from-10% via-indigo-600 via-30% via-purple-600 via-50% to-pink-800 to-90% inline-block text-transparent bg-clip-text font-semibold"><span>{text}</span><Cursor /></h2>
         </div>
-        <div className="flex justify-center md:mb-4 mb-2 bg-violet-950">
+        <div className="flex justify-center md:mb-4 mb-2 bg-violet-950 h-15 w-68 md:">
           <button className={`px-1 py-1 md:px-12 md:py-2 mx-2 md:mx-2 text-sm md:text-xl font-semibold ${activeTab === 'education' ? 'text-white border-2 border-violet-800 bg-violet-500 transition ease-in-out delay-0 hover:-translate-y-1 hover:scale-110 duration-300' : 'text-lg md:text-xl text-white '}`}
             onClick={() => setActiveTab('education')} > Education</button>
           <button  className={`px-1 py-1 md:px-12 md:py-2 mx-2 md:mx-2 text-sm md:text-xl font-semibold ${activeTab === 'skills' ? 'text-white border-2 border-violet-800 bg-violet-500 transition ease-in-out delay-0 hover:-translate-y-1 hover:scale-110 duration-300' : 'text-lg md:text-xl text-white'}`}

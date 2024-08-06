@@ -27,13 +27,13 @@ const Slideshow = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentSlide((prevSlide) => (prevSlide + 1) % images.length);
-    }, 3000); 
+    }, 2000); 
 
     return () => clearInterval(interval);
   }, []);
 
   return (
-    <div className="grid relative mx-3 rounded-lg md:mx-28 my-8 w-[350px] md:w-[500px] h-[800px] overflow-hidden transition ease-in-out delay-0 hover:-translate-y-1 hover:scale-110 duration-300 ">
+    <div className="grid relative mx-3 rounded-lg md:mx-28 my-8 w-[330px] md:w-[500px] h-[800px] overflow-hidden transition ease-in-out delay-0 hover:-translate-y-1 hover:scale-110 duration-300 ">
       {images.map((image, index) => (
         <div
           key={index}
@@ -148,31 +148,31 @@ const SampleProjects = () => {
       <p className='font-bold text-4xl mt-4 col-span-2 text-center text-violet-900 h-12 w-full'>Slideshow of my Projects</p>
       <div className=''><Slideshow /></div>
         <div className='hidden md:grid my-12 text-2xl text-violet-900'>
-          <p className='m-8'>
+          <p className=' m-8'>
             <span className='inline-block mr-2'>→</span>{text}
           </p>
-          <p className='m-8'>
+          <p className=' m-8'>
             <span className='inline-block mr-2 '>→</span>{text2}
           </p>
-          <p className='m-8'>
+          <p className=' m-8'>
             <span className='inline-block mr-2'>→</span>{text1}
           </p>
-          <p className='m-8'>
+          <p className=' m-8'>
             <span className='inline-block mr-2'>→</span>{text4}
           </p>
-          <p className='m-8'>
+          <p className=' m-8'>
             <span className='inline-block mr-2'>→</span>{text5}
           </p>
-          <p className='m-8'>
+          <p className=' m-8'>
             <span className='inline-block mr-2'>→</span>{text6}
           </p>
-          <p className='m-8'>
+          <p className=' m-8'>
             <span className='inline-block mr-2'>→</span>{text7}
           </p>
         </div>
           </div>
         <div class="px-2 md:px-16 bg-violet-500 p-4">
-          <div className='text-white h-10 w-full text-center md:text-2xl text-xl font-bold m-1 mdm-8'>{text3}<Cursor/></div>
+          <div className='text-white h-10 w-full text-center md:text-2xl text-xl font-bold m-1 md:m-8'>{text3}<Cursor/></div>
           <div className='md:hidden text-white h-10 w-full text-center text-sm font-bold'>Scroll <Cursor cursorStyle={'>'}/></div>
           <div smooth={true} duration={3000} className='scroll-smooth flex overflow-x-auto snap-x '>
             <div class="flex-none w-[300px] h-[200px] md:w-[550px] md:h-[420px] md:mx-4 mx-2 ">

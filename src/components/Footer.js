@@ -13,10 +13,10 @@ const Footer = () => {
       <div className="cursor-pointer flex flex-col items-center lg:text-center bg-white p-4 sm:p-4 rounded-lg shadow-lg mb-4 sm:mb-8 md:mb-0 w-full sm:text-justify md:w-1/2 lg:w-2/5">
         <img src={profilepic} alt="Profile" className="origin-bottom -rotate-12 hover:origin-bottom hover:rotate-[35] rounded-full w-16 h-16 sm:w-16 sm:h-16 md:w-20 md:h-20 mb-2 sm:mb-4 border-4 border-violet-500 transition ease-in-out delay-0 hover:-translate-y-1 hover:scale-110 duration-300"  />
         <div>
-          <h2 className="text-xl sm:text-2xl md:text-3xl font-bold lg:px-12 px-12 mb-2 sm:mb-4 bg-gradient-to-r from-violet-950 from-10% via-indigo-600 via-30% via-purple-600 via-50% to-pink-800 to-90% inline-block text-transparent bg-clip-text transition ease-in-out delay-0 hover:-translate-y-1 hover:scale-110 duration-300">
+          <h2 className="text-xl sm:text-2xl md:text-3xl font-bold lg:px-12 px-8 mb-2 sm:mb-4 bg-gradient-to-r from-violet-950 from-10% via-indigo-600 via-30% via-purple-600 via-50% to-pink-800 to-90% inline-block text-transparent bg-clip-text transition ease-in-out delay-0 hover:-translate-y-1 hover:scale-110 duration-300">
             Kamishka Jamshaid
           </h2>
-          <p className="text-violet-900 pr-8 pl-12 lg:px-4 mb-2 sm:mb-4 text-xs sm:text-sm md:text-lg lg:text-lg">
+          <p className="text-violet-900 pr-8 pl-6 text-center lg:px-4 mb-2 sm:mb-4 text-xs sm:text-sm md:text-lg lg:text-lg">
             I believe in the power of design to transform ideas into tangible, user-friendly websites.
           </p>
         </div>

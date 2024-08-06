@@ -22,8 +22,7 @@ const Header = () => {
           </button>
         </div>
 
-        <nav
-          className={`${
+        <nav className={`${
             isMenuOpen ? 'flex' : 'hidden'
           } md:flex flex-col md:flex-row md:items-center bg-violet-950 md:bg-transparent absolute md:static top-full left-0 w-40 mx-24 my-0 md:w-auto space-y-2 md:space-y-0 md:space-x-4 mt-2 md:mt-0 p-2 md:p-0 text-white rounded-lg`}
         >
