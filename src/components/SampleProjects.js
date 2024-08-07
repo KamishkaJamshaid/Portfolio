@@ -33,7 +33,7 @@ const Slideshow = () => {
   }, []);
 
   return (
-    <div className="grid relative mx-3 rounded-lg md:mx-28 my-8 w-[330px] md:w-[500px] h-[800px] overflow-hidden transition ease-in-out delay-0 hover:-translate-y-1 hover:scale-110 duration-300 ">
+    <div className="grid relative mx-3 rounded-lg md:mx-28 my-8 w-[330px] md:w-[500px] lg:w-[800] h-[800px] overflow-hidden transition ease-in-out delay-0 hover:-translate-y-1 hover:scale-110 duration-300 ">
       {images.map((image, index) => (
         <div
           key={index}
@@ -117,7 +117,7 @@ const SampleProjects = () => {
           <span className="static inline-flex rounded-full h-4 w-4 bg-violet-500"></span>
         </span>
         <h3 className="text-2xl font-bold my-8 text-violet-800 ml-8 mt-20">My Projects</h3>
-        <div className="hidden md:grid lg:grid-cols-4 gap-4 p-4 border-violet-800 border-2 h-[1050px] overflow-hidden shadow-lg shadow-violet-800 rounded-lg shadow-3xl bg-violet-800">
+        <div className="hidden md:hidden lg:grid lg:grid-cols-4 gap-4 p-4 border-violet-800 border-2 h-[1050px] overflow-hidden shadow-lg shadow-violet-800 rounded-lg shadow-3xl bg-violet-800">
           <div className="col-span-1 row-span-6">
             <img src={pic7} alt="Large" className=" object-cover border-violet-400 border-2 rounded-lg"/>
           </div>
@@ -145,9 +145,9 @@ const SampleProjects = () => {
         </div>
       </section>
       <div className='grid md:grid-cols-2 md:gap-4 bg-white rounded-lg md:px-8 py-2 md:m-4 shadow-inner shadow-violet-800 border-4 border-violet-900'>
-      <p className='font-bold text-4xl mt-4 col-span-2 text-center text-violet-900 h-12 w-full'>Slideshow of my Projects</p>
+      <p className='font-bold text-2xl md:text-4xl mt-4 col-span-2 text-center text-violet-900 h-12 w-full'>Slideshow of my Projects</p>
       <div className=''><Slideshow /></div>
-        <div className='hidden md:grid my-12 text-2xl text-violet-900'>
+        <div className='hidden lg:grid my-12 text-2xl text-violet-900'>
           <p className=' m-8'>
             <span className='inline-block mr-2'>→</span>{text}
           </p>
@@ -172,22 +172,22 @@ const SampleProjects = () => {
         </div>
           </div>
         <div class="px-2 md:px-16 bg-violet-500 p-4">
-          <div className='text-white h-10 w-full text-center md:text-2xl text-xl font-bold m-1 md:m-8'>{text3}<Cursor/></div>
+          <div className='text-white h-10 w-full text-center md:text-2xl text-xl font-bold m-1 md:m-2 lg:m-8'>{text3}<Cursor/></div>
           <div className='md:hidden text-white h-10 w-full text-center text-sm font-bold'>Scroll <Cursor cursorStyle={'>'}/></div>
           <div smooth={true} duration={3000} className='scroll-smooth flex overflow-x-auto snap-x '>
-            <div class="flex-none w-[300px] h-[200px] md:w-[550px] md:h-[420px] md:mx-4 mx-2 ">
+            <div class="flex-none w-[300px] h-[200px] md:w-[550px] md:h-[420px] md:mx-2 lg:mx-4 mx-2 ">
               <img src={pic8} className=' h-[200px] md:h-[400px] rounded-lg'/>
             </div>
-            <div class="flex-none w-[300px] h-[200px] md:w-[550px] md:h-[450px] md:ml-12 mr-6 snap-start ml-4">
+            <div class="flex-none w-[300px] h-[200px] md:w-[550px] md:h-[450px] lg:ml-12 md:ml-4 mr-6 snap-start ml-4">
               <img src={pic1} className=' md:h-[400px] h-[200px] rounded-lg'/>
             </div>
-            <div class="flex-none w-[300px] h-[200px] md:w-[550px] md:h-[450px] md:-mx-8 snap-start -mr-12 -ml-16">
+            <div class="flex-none w-[300px] h-[200px] md:w-[550px] md:h-[450px] lg:-mx-8 md:-mx-16 snap-start -mr-12 -ml-16">
               <img src={pic3} className=' md:h-[400px] h-[200px] rounded-lg'/>
             </div>
-            <div class="flex-none w-[300px] h-[200px] md:w-[550px] md:h-[450px] md:mx-4 snap-start mx-3">
+            <div class="flex-none w-[300px] h-[200px] md:w-[550px] md:h-[450px] lg:mx-4 snap-start mx-3">
               <img src={pic9}className='  md:h-[400px] h-[200px] rounded-lg'/>
             </div>
-            <div class="flex-none w-[300px] h-[200px] md:w-[550px] md:h-[450px] md:ml-12 snap-start mx-2">
+            <div class="flex-none w-[300px] h-[200px] md:w-[550px] md:h-[450px] lg:ml-12 snap-start mx-2">
               <img src={pic2}className='  md:h-[400px] h-[200px] rounded-lg'/>
             </div>
             </div>
