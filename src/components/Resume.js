@@ -16,11 +16,11 @@ const Resume = () => {
           <h2 className="text-3xl md:text-4xl font-semibold bg-gradient-to-r from-violet-950 from-10% via-indigo-600 via-30% via-purple-600 via-50% to-pink-800 to-90% inline-block text-transparent bg-clip-text font-semibold"><span>{text}</span><Cursor /></h2>
         </div>
         <div className="flex justify-center md:mb-4 mb-2 bg-violet-950 h-15 w-68 md:">
-          <button className={`px-1 py-1 md:px-12 md:py-2 mx-2 md:mx-2 text-sm md:text-xl font-semibold ${activeTab === 'education' ? 'text-white border-2 border-violet-800 bg-violet-500 transition ease-in-out delay-0 hover:-translate-y-1 hover:scale-110 duration-300' : 'text-lg md:text-xl text-white '}`}
+          <button className={`px-1 py-1 md:px-12 md:py-2 mx-2 md:mx-2 text-sm md:text-xl font-semibold ${activeTab === 'education' ? 'text-white border-violet-800 bg-violet-500' : 'text-lg md:text-xl text-white '}`}
             onClick={() => setActiveTab('education')} > Education</button>
-          <button  className={`px-1 py-1 md:px-12 md:py-2 mx-2 md:mx-2 text-sm md:text-xl font-semibold ${activeTab === 'skills' ? 'text-white border-2 border-violet-800 bg-violet-500 transition ease-in-out delay-0 hover:-translate-y-1 hover:scale-110 duration-300' : 'text-lg md:text-xl text-white'}`}
+          <button  className={`px-1 py-1 md:px-12 md:py-2 mx-2 md:mx-2 text-sm md:text-xl font-semibold ${activeTab === 'skills' ? 'text-white border-violet-800 bg-violet-500' : 'text-lg md:text-xl text-white'}`}
             onClick={() => setActiveTab('skills')}> Professional Skills </button>
-            <button  className={`px-1 py-1 md:px-12 md:py-2 mx-2 md:mx-2 text-sm md:text-xl font-semibold ${activeTab === 'summary' ? 'text-white border-2 border-violet-800 bg-violet-500 transition ease-in-out delay-0 hover:-translate-y-1 hover:scale-110 duration-300' : 'text-lg md:text-xl text-white'}`}
+            <button  className={`px-1 py-1 md:px-12 md:py-2 mx-2 md:mx-2 text-sm md:text-xl font-semibold ${activeTab === 'summary' ? 'text-white border-violet-800 bg-violet-500' : 'text-lg md:text-xl text-white'}`}
             onClick={() => setActiveTab('summary')}>Summary </button>
         </div>
         {activeTab === 'education' && (
@@ -135,7 +135,7 @@ const Resume = () => {
           </div>
         )}
         {activeTab === 'summary' && (
-          <div className="bg-white text-justify p-6 md:p-8 rounded-lg shadow-md text-violet-800 border-2 border-violet-800">
+          <div className="bg-white p-6 md:p-8 rounded-lg shadow-md text-violet-800 border-2 border-violet-800">
              <h2 className="text-3xl font-semibold mb-6 text-violet-950">Summary</h2>
                 <div className='hidden md:block'><h2 className="text-xl underline bg-gradient-to-r from-violet-950 from-10% via-indigo-600 via-30% via-purple-600 via-50% to-pink-800 to-90% inline-block text-transparent bg-clip-text font-bold "><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 inline">
                 <path stroke-linecap="round" stroke-linejoin="round" d="m5.25 4.5 7.5 7.5-7.5 7.5m6-15 7.5 7.5-7.5 7.5" />

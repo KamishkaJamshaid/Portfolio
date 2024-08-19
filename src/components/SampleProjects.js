@@ -33,7 +33,7 @@ const Slideshow = () => {
   }, []);
 
   return (
-    <div className="grid relative mx-3 rounded-lg md:mx-28 my-8 w-[330px] md:w-[500px] lg:w-[800] h-[800px] overflow-hidden transition ease-in-out delay-0 hover:-translate-y-1 hover:scale-110 duration-300 ">
+    <div className="grid relative mx-3 rounded-lg md:mx-28 lg:mx-28 2xl:mx-96 my-8 w-[330px] md:w-[500px] lg:w-[800] h-[800px] overflow-hidden transition ease-in-out delay-0 hover:-translate-y-1 hover:scale-110 duration-300 ">
       {images.map((image, index) => (
         <div
           key={index}
@@ -117,7 +117,7 @@ const SampleProjects = () => {
           <span className="static inline-flex rounded-full h-4 w-4 bg-violet-500"></span>
         </span>
         <h3 className="text-2xl font-bold my-8 text-violet-800 ml-8 mt-20">My Projects</h3>
-        <div className="hidden md:hidden lg:grid lg:grid-cols-4 gap-4 p-4 border-violet-800 border-2 h-[1050px] overflow-hidden shadow-lg shadow-violet-800 rounded-lg shadow-3xl bg-violet-800">
+        <div className="hidden md:hidden lg:grid lg:grid-cols-4 gap-4 p-4 border-violet-800 border-2 lg:h-[1050px] 2xl:h-[1150px] overflow-hidden shadow-lg shadow-violet-800 rounded-lg shadow-3xl bg-violet-800">
           <div className="col-span-1 row-span-6">
             <img src={pic7} alt="Large" className=" object-cover border-violet-400 border-2 rounded-lg"/>
           </div>
