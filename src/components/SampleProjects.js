@@ -1,16 +1,18 @@
 import React, { useState, useEffect } from 'react';
-import pic from '../assets/opic.png';
+import pic from '../assets/opic.jpg';
 import pic1 from '../assets/4.jpg';
 import pic2 from '../assets/homesite.jpg';
-import pic3 from '../assets/page.jpeg';
-import pic4 from '../assets/pic (2).PNG';
-import pic5 from '../assets/hpic.png';
-import pic6 from '../assets/rpic.png';
+import pic3 from '../assets/page.jpg';
+import pic4 from '../assets/pic (2).jpg';
+import pic5 from '../assets/hpic.jpg';
+import pic6 from '../assets/rpic.jpg';
 import pic7 from '../assets/pic (1).PNG';
 import pic8 from '../assets/pic.jpg';
 import pic9 from '../assets/pic2.jpg';
 import pic10 from '../assets/p1.PNG';
 import { useTypewriter, Cursor } from 'react-simple-typewriter';
+import 'aos/dist/aos.css';
+import AOS from 'aos';
 
 const images = [pic10, pic, pic5, pic4, pic6]; 
 const descriptions = [
@@ -33,7 +35,7 @@ const Slideshow = () => {
   }, []);
 
   return (
-    <div className="grid relative mx-3 rounded-lg md:mx-28 lg:mx-28 2xl:mx-96 my-8 w-[330px] md:w-[500px] lg:w-[800] h-[800px] overflow-hidden transition ease-in-out delay-0 hover:-translate-y-1 hover:scale-110 duration-300 ">
+    <div className="grid relative mx-4 rounded-lg md:mx-24 lg:mx-4 2xl:mx-96 my-8 w-[330px] md:w-[450px] lg:w-[500] h-[800px] overflow-hidden transition ease-in-out delay-0 hover:-translate-y-1 hover:scale-110 duration-300 ">
       {images.map((image, index) => (
         <div
           key={index}
@@ -41,8 +43,8 @@ const Slideshow = () => {
             index === currentSlide ? 'opacity-100' : 'opacity-0'
           }`}
         >
-          <img src={image} alt={`Slide ${index}`} className=" object-cover rounded-lg" />
-          <div className={`absolute bottom-0 left-0 w-full text-center p-4 bg-gradient-to-t from-black to-transparent text-white text-2xl text-semibold ${
+          <img src={image} alt={`Slide ${index}`} data-aos="flip-left" className=" object-cover rounded-lg" />
+          <div className={`absolute bottom-0 left-0 w-full text-center p-4 bg-gradient-to-t from-black to-transparent text-white md:text-xl lg:text-2xl text-semibold ${
             index === currentSlide ? 'block' : 'hidden'
           }`}>
             {descriptions[index]}
@@ -53,6 +55,12 @@ const Slideshow = () => {
   );
 };
 const SampleProjects = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+    });
+  }, []);
+
   const [text] = useTypewriter({
     words: ['Responsive web designs'],
     loop: true,
@@ -144,7 +152,7 @@ const SampleProjects = () => {
           </div>
         </div>
       </section>
-      <div className='grid md:grid-cols-2 md:gap-4 bg-white rounded-lg md:px-8 py-2 md:m-4 shadow-inner shadow-violet-800 border-4 border-violet-900'>
+      <div className='grid md:grid-cols-2 md:gap-4 bg-white rounded-lg md:px-8  py-2 md:m-4 shadow-inner shadow-violet-800 border-4 border-violet-900'>
       <p className='font-bold text-2xl md:text-4xl mt-4 col-span-2 text-center text-violet-900 h-12 w-full'>Slideshow of my Projects</p>
       <div className=''><Slideshow /></div>
         <div className='hidden lg:grid my-12 text-2xl text-violet-900'>
@@ -175,19 +183,19 @@ const SampleProjects = () => {
           <div className='text-white h-10 w-full text-center md:text-2xl text-xl font-bold m-1 md:m-2 lg:m-8'>{text3}<Cursor/></div>
           <div className='md:hidden text-white h-10 w-full text-center text-sm font-bold'>Scroll <Cursor cursorStyle={'>'}/></div>
           <div smooth={true} duration={3000} className='scroll-smooth flex overflow-x-auto snap-x '>
-            <div class="flex-none w-[300px] h-[200px] md:w-[550px] md:h-[420px] md:mx-2 lg:mx-4 mx-2 ">
+            <div data-aos="flip-left" class="flex-none w-[300px] h-[200px] md:w-[550px] md:h-[420px] md:mx-2 lg:mx-4 mx-2 ">
               <img src={pic8} className=' h-[200px] md:h-[400px] rounded-lg'/>
             </div>
-            <div class="flex-none w-[300px] h-[200px] md:w-[550px] md:h-[450px] lg:ml-12 md:ml-4 mr-6 snap-start ml-4">
+            <div data-aos="flip-left" class="flex-none w-[300px] h-[200px] md:w-[550px] md:h-[450px] lg:ml-12 md:ml-4 mr-6 snap-start ml-4">
               <img src={pic1} className=' md:h-[400px] h-[200px] rounded-lg'/>
             </div>
-            <div class="flex-none w-[300px] h-[200px] md:w-[550px] md:h-[450px] lg:-mx-8 md:-mx-16 snap-start -mr-12 -ml-16">
+            <div data-aos="flip-left" class="flex-none w-[300px] h-[200px] md:w-[550px] md:h-[450px] lg:-mx-8 md:-mx-16 snap-start -mr-12 -ml-16">
               <img src={pic3} className=' md:h-[400px] h-[200px] rounded-lg'/>
             </div>
-            <div class="flex-none w-[300px] h-[200px] md:w-[550px] md:h-[450px] lg:mx-4 snap-start mx-3">
+            <div data-aos="flip-left" class="flex-none w-[300px] h-[200px] md:w-[550px] md:h-[450px] lg:mx-4 snap-start mx-3">
               <img src={pic9}className='  md:h-[400px] h-[200px] rounded-lg'/>
             </div>
-            <div class="flex-none w-[300px] h-[200px] md:w-[550px] md:h-[450px] lg:ml-12 snap-start mx-2">
+            <div data-aos="flip-left" class="flex-none w-[300px] h-[200px] md:w-[550px] md:h-[450px] lg:ml-12 snap-start mx-2">
               <img src={pic2}className='  md:h-[400px] h-[200px] rounded-lg'/>
             </div>
             </div>

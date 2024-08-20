@@ -1,16 +1,23 @@
 import { Link } from 'react-scroll';
 import { FaFacebookF, FaLinkedinIn, FaEnvelope } from 'react-icons/fa';
+import background from '../assets/bg.jpg';
 import profilepic from '../assets/profile.jpeg';
 import React from "react";
+import 'aos/dist/aos.css';
+import AOS from 'aos';
+import { useEffect } from 'react';
 
 const Footer = () => {
- 
+  useEffect(() => {
+    AOS.init({
+      duration: 1500,
+    });
+  }, []);
+
   return (
     <>
-      <section
-      id="footer"
-      className="bottom-0 px-8 md:px-2 cursor-pointer flex flex-col bg-[url('https://assets-global.website-files.com/660a953d221d423306bbc7bd/660aaca80d7f990b2dd03262_CTA%20Background%20Image-p-1600.jpg')] bg-cover bg-center py-6 px-2 sm:px-6 md:px-16 lg:px-32 w-full md:flex-row items-center justify-center text-black">
-      <div className="cursor-pointer flex flex-col gap-2 items-center lg:text-center bg-white p-4 sm:p-4 rounded-lg shadow-lg mb-4 sm:mb-8 md:mb-0 w-full sm:text-justify md:w-80 md:mr-8 lg:w-2/5">
+      <section id="footer" style={{ backgroundImage: `url(${background})`}} className="bottom-0 px-8 md:px-2 cursor-pointer flex flex-col bg-cover bg-center py-6 px-2 sm:px-6 md:px-16 lg:px-32 w-full md:flex-row items-center justify-center text-black">
+      <div data-aos="fade-right" className="cursor-pointer flex flex-col gap-2 items-center lg:text-center bg-white p-4 sm:p-4 rounded-lg shadow-lg mb-4 sm:mb-8 md:mb-0 w-full sm:text-justify md:w-80 md:mr-8 lg:w-2/5">
         <img src={profilepic} alt="Profile" className="origin-bottom -rotate-12 hover:origin-bottom hover:rotate-[35] rounded-full w-16 h-16 sm:w-16 sm:h-16 lg:w-20 lg:h-20 mb-2 sm:mb-4 border-4 border-violet-500 transition ease-in-out delay-0 hover:-translate-y-1 hover:scale-110 duration-300"  />
         <div>
           <h2 className="text-xl md:text-2xl lg:text-3xl font-bold lg:px-12 px-8 md:px-6 mb-2 sm:mb-4 bg-gradient-to-r from-violet-950 from-10% via-indigo-600 via-30% via-purple-600 via-50% to-pink-800 to-90% inline-block text-transparent bg-clip-text transition ease-in-out delay-0 hover:-translate-y-1 hover:scale-110 duration-300">
@@ -21,7 +28,7 @@ const Footer = () => {
           </p>
         </div>
       </div>
-      <div className="flex flex-col items-center bg-white p-4 lg:p-8 rounded-lg shadow-lg w-full md:w-80 lg:w-3/5 lg:ml-16 text-center">
+      <div data-aos="fade-left" className="flex flex-col items-center bg-white p-4 lg:p-8 rounded-lg shadow-lg w-full md:w-80 lg:w-3/5 lg:ml-16 text-center">
         <h2 className="text-xl md:text-3xl lg:text-4xl font-bold my-2 sm:my-4 text-violet-900">
           Got a project in mind?
         </h2>

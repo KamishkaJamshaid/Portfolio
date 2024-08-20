@@ -1,11 +1,20 @@
 import React from 'react';
 import { Link } from 'react-scroll';
 import { useTypewriter, Cursor } from 'react-simple-typewriter';
+import background from '../assets/bg.jpg';
 import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
+import 'aos/dist/aos.css';
+import AOS from 'aos';
 
 function Home() {
   const circleRef = useRef(null);
+
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+    });
+  }, []);
 
   useEffect(() => {
       const element = circleRef.current;
@@ -17,27 +26,15 @@ function Home() {
     typeSpeed:120,
     deleteSpeed:60,
   });
-  const [text1] = useTypewriter({
-    words: ['Kamishka '],
-    loop: true,
-    typeSpeed:120,
-    deleteSpeed:60,
-  });
-  const [text2] = useTypewriter({
-    words: [' Jamshaid'],
-    loop: true,
-    typeSpeed:220,
-    deleteSpeed:60,
-  });
 
   return (
-    <section id='home' className="bg-[url('https://assets-global.website-files.com/660a953d221d423306bbc7bd/660aaca80d7f990b2dd03262_CTA%20Background%20Image-p-1600.jpg')] bg-cover bg-center text-white flex flex-col lg:flex-row justify-between p-4">
+    <section id='home' style={{ backgroundImage: `url(${background})`}} className="bg-cover bg-center text-white flex flex-col lg:flex-row justify-between p-4">
       <div className="flex flex-col lg:flex-row my-8 justify-center">
         <div className="animate-parent-spin md:mx-52 flex justify-center w-56 md:w-80 md:h-80 lg:h-96 lg:w-96 mt-6 h-56 text-center rounded-full items-center border-white lg:border-[24px] md:border-[16px] border-[12px] lg:mx-12 mx-12">
           <div className="animate-none flex justify-center lg:w-72 lg:h-72 w-44 h-44 md:h-64 md:w-64 bg-white text-center rounded-full items-center">
             <div className="absolute align-middle text-center transition ease-in-out duration-300 hover:-translate-y-1 hover:scale-110">
-              <h1 className="align-middle text-xl md:text-3xl lg:text-4xl font-bold bg-gradient-to-r from-violet-950 via-indigo-600 to-pink-800 text-transparent bg-clip-text text-center animate-pulse transition ease-in-out duration-300 hover:-translate-y-1 hover:scale-110">
-                {text1}<br/><span>{text2}</span><span style={{color:'red'}}><Cursor /></span> 
+              <h1 className="align-middle text-xl md:text-3xl lg:text-4xl font-bold bg-gradient-to-r from-violet-950 via-indigo-600 to-pink-800 text-transparent bg-clip-text text-center transition ease-in-out duration-300 hover:-translate-y-1 hover:scale-110" >
+                Kamishka <br/>Jamshaid 
               </h1>
             </div>
             <span ref={circleRef} className="lg:place-self-end lg:relative lg:h-20 lg:w-20 w-40 h-40 md:w-40 md:h-40 lg:mr-72 mr-44 mt-24 md:mt-56 md:mr-48 grid text-center items-center">
@@ -52,10 +49,10 @@ function Home() {
           <div className=" lg:ml-0 mx-auto flex flex-row lg:justify-left lg:justify-left my-4 lg:my-12 mr-24">
             <div className="relative group">
               <div className="absolute rounded-full -inset-1 shadow-none bg-gradient-to-r from-indigo-400 via-pink-400 to-teal-400 blur opacity-100 group-hover:opacity-100 transition duration-1000 group-hover:duration-200"></div>
-              <Link to="footer" smooth={true} duration={1000}>
+              <Link to="footer" smooth={true} duration={700}>
                 <button type="button" className="bg-gradient-to-r from-violet-950 via-violet-600 to-purple-700 text-white relative lg:w-56 lg:h-12 h-11 lg:px-6 py-2 w-44 px-4 text-sm lg:text-lg  static rounded-full hover:text-white hover:shadow-inner hover:shadow-cyan-500/50 hover:bg-gradient-to-r hover:from-indigo-700 hover:via-purple-600 hover:to-indigo-700 flex items-center transition ease-in-out duration-300 hover:-translate-y-1 hover:scale-110">
                   Available for Work
-                  <div className="absolute lg:ml-40 ml-32 -rotate-90 my-4 bold">
+                  <div className="absolute lg:ml-40 ml-32 -rotate-90 my-4 bold ">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="animate-bounce w-6 h-6">
                       <path fillRule="evenodd" d="M12 2.25a.75.75 0 0 1 .75.75v16.19l6.22-6.22a.75.75 0 1 1 1.06 1.06l-7.5 7.5a.75.75 0 0 1-1.06 0l-7.5-7.5a.75.75 0 1 1 1.06-1.06l6.22 6.22V3a.75.75 0 0 1 .75-.75Z" clipRule="evenodd" />
                     </svg>
